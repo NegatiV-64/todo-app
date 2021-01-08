@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do App</title>
+    <!-- Libs -->
+    <link rel="stylesheet" href="libs/bootstrap-4.5.0-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="libs/fontawesome-pro-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="libs/hamburgers.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="container nav__container">
+                <a class="nav__logo" href="./index.html">todo</a>
+                <a class="nav__add" href="#!"><i class="fal fa-plus"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container main__container">
+            <section class="sidebar">
+                <ul class="siderbar-list">
+                    <li><a class="siderbar-list__link" data-filter="all" href="#!"><i
+                                class="siderbar-list__link_icon siderbar-list__link_icon_all fas fa-circle"></i> all</a>
+                    </li>
+                    <li><a class="siderbar-list__link" data-filter="work" href="#!"><i
+                                class="siderbar-list__link_icon siderbar-list__link_icon_w fas fa-circle"></i> work</a>
+                    </li>
+                    <li><a class="siderbar-list__link" data-filter="study" href="#!"><i
+                                class="siderbar-list__link_icon siderbar-list__link_icon_s fas fa-circle"></i> study</a>
+                    </li>
+                    <li><a class="siderbar-list__link" data-filter="entertainment" href="#!"><i
+                                class="siderbar-list__link_icon siderbar-list__link_icon_e fas fa-circle"></i>
+                            entertainment</a></li>
+                    <li><a class="siderbar-list__link" data-filter="family" href="#!"><i
+                                class="siderbar-list__link_icon siderbar-list__link_icon_f fas fa-circle"></i>
+                            family</a></li>
+                    <li><a class="siderbar-list__link" data-filter="other" href="#!"><i
+                                class="siderbar-list__link_icon siderbar-list__link_icon_o fas fa-circle"></i> other</a>
+                    </li>
+                </ul>
+
+                <a class="theme-toggler" href="#!">dark theme</a>
+            </section>
+
+            <section class="tasks">
+                <div class="task__container">
+                    <div class="row">
+                        <div class="col-6" data-filter="work">
+                            <div class="task-card">
+                                <h3 class="task-card__title">
+                                    <span class="task-card__title_span">My first task</span>
+                                    <a class="task-card__extra" href="#!"><i class=" fal fa-ellipsis-h"></i></a>
+                                    <ul class="task-card-settings">
+                                        <li><a class="task-card-settings__link task-card-settings__edit"
+                                                href="#!">Edit</a></li>
+                                        <li><a class="task-card-settings__link task-card-settings__delete"
+                                                href="#!">Delete</a></li>
+                                    </ul>
+                                </h3>
+                                <p class="task-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,
+                                    incidunt alias nostrum sequi error commodi magnam quaerat veniam quibusdam atque,
+                                    animi assumenda perferendis id esse reiciendis unde maiores. Sint, accusantium.
+                                </p>
+                                <div class="task-card-info">
+                                    <ul class="task-card-info-tags">
+                                        <li><a class="task-card-info-tags__list" href="#!"><i
+                                                    class="siderbar-list__link_icon siderbar-list__link_icon_w fas fa-circle"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="task-card-info__done">
+                                        <input class="task-card-info__check" type="checkbox" name="task_done" id="done">
+                                        <i class="task-card-info__checker fal fa-check"></i>
+                                        <label class="task-card-info__label" for="task-card-info__check">Done</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6" data-filter="family">
+                            <div class="task-card">
+                                <h3 class="task-card__title">
+                                    <span class="task-card__title_span">My second task</span>
+                                    <a class="task-card__extra" href="#!"><i class=" fal fa-ellipsis-h"></i></a>
+                                    <ul class="task-card-settings">
+                                        <li><a class="task-card-settings__link task-card-settings__edit"
+                                                href="#!">Edit</a></li>
+                                        <li><a class="task-card-settings__link task-card-settings__delete"
+                                                href="#!">Delete</a></li>
+                                    </ul>
+                                </h3>
+                                <p class="task-card__text">Hello there dolor sit amet consectetur adipisicing elit. Nam,
+                                    incidunt alias nostrum sequi error commodi magnam quaerat veniam quibusdam atque,
+                                    animi assumenda perferendis id esse reiciendis unde maiores. Sint, accusantium.
+                                </p>
+                                <div class="task-card-info">
+                                    <ul class="task-card-info-tags">
+                                        <li><a class="task-card-info-tags__list" href="#!"><i
+                                                    class="siderbar-list__link_icon siderbar-list__link_icon_f fas fa-circle"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="task-card-info__done">
+                                        <input class="task-card-info__check" type="checkbox" name="task_done">
+                                        <label class="task-card-info__label" for="task-card-info__check">Done</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <div class="add">
+        <div class="add__container container">
+            <div class="add-top">
+                <a class="add-top__link add-top__link_cancel" href="#!">Cancel</a>
+                <button class="add-top__link add-top__link_add">Add</button>
+            </div>
+            <form class="add-form" id="add-form">
+                <label for="addTitle">Title</label>
+                <input class="add-form__title" id="addTitle" type="text" required placeholder="add a title ...">
+
+                <label for="addDesc">Description</label>
+                <textarea class="add-form__textarea" id="addDesc" cols="30" rows="10" required
+                    placeholder="add a description ..."></textarea>
+
+                <p class="add-tags-title">Tags</p>
+                <ul class="add-tags">
+                    <li><a class="add-tags__link add-tags__link_first" href="#!">
+                            <i class="siderbar-list__link_icon siderbar-list__link_icon_w fas fa-circle"></i>work</a>
+                    </li>
+                    <li><a class="add-tags__link" href="#!"><i
+                                class="siderbar-list__link_icon siderbar-list__link_icon_s fas fa-circle"></i>study</a>
+                    </li>
+                    <li><a class="add-tags__link" href="#!"><i
+                                class="siderbar-list__link_icon siderbar-list__link_icon_e fas fa-circle"></i>entertainment</a>
+                    </li>
+                    <li><a class="add-tags__link" href="#!"><i
+                                class="siderbar-list__link_icon siderbar-list__link_icon_f fas fa-circle"></i>family</a>
+                    </li>
+                    <li><a class="add-tags__link" href="#!"><i
+                                class="siderbar-list__link_icon siderbar-list__link_icon_o fas fa-circle"></i>other</a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    
+    <div class="edit">
+        <div class="container edit__container">
+            <div class="edit-top">
+                <a class="edit-top__link edit-top__link_cancel" href="#!">Cancel</a>
+                <button class="edit-top__link edit-top__link_save">Save</button>
+            </div>
+
+            <form class="edit-form" id="edit-form">
+                <label for="editTitle">Title</label>
+                <input class="edit-form__title editJqueryClass" id="editTitle" type="text" required>
+
+                <label for="editDesc">Description</label>
+                <textarea class="edit-form__textarea" id="editDesc" cols="30" rows="10" required></textarea>
+
+                <p class="edit-tags-title">Tags</p>
+                <ul class="edit-tags">
+                    <li><a class="edit-tags__link edit-tags__link_first" href="#!">
+                            <i class="siderbar-list__link_icon siderbar-list__link_icon_w fas fa-circle"></i>work</a>
+                    </li>
+                    <li><a class="edit-tags__link" href="#!"><i
+                                class="siderbar-list__link_icon siderbar-list__link_icon_s fas fa-circle"></i>study</a>
+                    </li>
+                    <li><a class="edit-tags__link" href="#!"><i
+                                class="siderbar-list__link_icon siderbar-list__link_icon_e fas fa-circle"></i>entertainment</a>
+                    </li>
+                    <li><a class="edit-tags__link" href="#!"><i
+                                class="siderbar-list__link_icon siderbar-list__link_icon_f fas fa-circle"></i>family</a>
+                    </li>
+                    <li><a class="edit-tags__link" href="#!"><i
+                                class="siderbar-list__link_icon siderbar-list__link_icon_o fas fa-circle"></i>other</a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./libs/jquery-3.5.1.min.js"></script>
+    <script src="./libs/popper.min.js"></script>
+    <script src="./libs/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
